@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Drone Simulation Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="/socket.io/socket.io.js"></script>
+  <!-- Local Three.js and helpers -->
+  <script src="three.min.js"></script>
+  <script src="OrbitControls.js"></script>
+  <script src="GLTFLoader.js"></script>
+</head>
+<body>
+  <h1>🚁 Drone Simulation Dashboard</h1>
+
+  <div id="container">
+    <div id="dashboard" class="glass">
+      <h2>Telemetry Data</h2>
+      <p><b>Battery:</b> <span id="battery">--</span>%</p>
+      <p><b>Altitude:</b> <span id="altitude">--</span> m</p>
+      <p><b>Speed:</b> <span id="speed">--</span> m/s</p>
+      <p><b>Temperature:</b> <span id="temperature">--</span> °C</p>
+      <p><b>Mode:</b> <span id="mode">--</span></p>
+      <p><b>GPS:</b> <span id="lat">--</span>, <span id="lon">--</span></p>
+      <p><b>Heading:</b> <span id="heading">--</span>°</p>
+    </div>
+
+    <div id="viewer" class="glass">
+      <h2>3D Drone Model</h2>
+      <canvas id="three-canvas"></canvas>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
